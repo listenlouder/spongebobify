@@ -5,9 +5,8 @@ import textwrap
 
 def spongebobify(sentence):
 	final_sentence = ''
-	words = sentence.split()
-	
-	for word in words:
+
+	for word in sentence.split():
 		for pos, letter in enumerate(word):
 			if pos % 2 == 0:
 				final_sentence += letter.lower()
@@ -23,12 +22,10 @@ def build_image(spongbobified_sentence):
 	draw = ImageDraw.Draw(image)
 	font = ImageFont.truetype('/Library/Fonts/arial black.ttf', size=18)
 
-	message = spongbobified_sentence
-
 	(W, H) = image.size
 	y = 300
 	
-	for line in textwrap.wrap(message, width=45):
+	for line in textwrap.wrap(spongbobified_sentence, width=45):
 			(w, h) = draw.textsize(line, font=font)
 			x = (W-w)/2
 

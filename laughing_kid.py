@@ -11,7 +11,7 @@ def build_image(sentence):
     (W, H) = image.size
     y = 25
 
-    for line in textwrap.wrap(sentence, width=40):
+    for line in textwrap.wrap(sentence, width=35):
         (w, h) = draw.textsize(line, font=font)
         x = (W - w) / 2
 

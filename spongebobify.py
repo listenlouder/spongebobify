@@ -20,12 +20,12 @@ def spongebobify(sentence):
 def build_image(spongbobified_sentence):
 	image = Image.open('resources/mocking_spongebob.jpg')
 	draw = ImageDraw.Draw(image)
-	font = ImageFont.truetype('/Library/Fonts/arial black.ttf', size=18)
+	font = ImageFont.truetype('/Library/Fonts/arial black.ttf', size=22)
 
 	(W, H) = image.size
-	y = 300
+	y = 280
 	
-	for line in textwrap.wrap(spongbobified_sentence, width=45):
+	for line in textwrap.wrap(spongbobified_sentence, width=32):
 			(w, h) = draw.textsize(line, font=font)
 			x = (W-w)/2
 
